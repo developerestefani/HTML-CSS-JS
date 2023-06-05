@@ -1,0 +1,83 @@
+/*Importamos esta fuente de googel para que se vean mejor los titulos*/
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+/*Definimos que todos los parametros de las cajas se tomen en cuanta como uno solo y poder definir mejor los tamanos*/
+*{
+  box-sizing: border-box;
+}
+
+/*definimosla fuente general, el tipo de display que tendran los contenedores que sera flexible, la alineación de los items y del contendio en centrado, recortamos el contenido con el fin de que el exedente no se muestre y dejamos los margenes en 0*/
+body{
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+/*En la sección general le damos la propiedad flexible uno al lado del otro y un ancho del 90% del ancho del espacio*/
+.section{
+  display: flex;
+  width: 90vw;
+}
+
+/*Hacemos que la iamgen sea proporcinal al contenerdos que la tiene, recotandola, y haciendola pequena; hacemos que la imagen es encuentre centrada y que la misma no se repita por si es más pequena; le damos una altura del 80% del contenedor, a la letra un color blanco, que cuando pase el cursor aparesca una mano, que tenga un borde semir redondeado de 15px, que solo se estire un 0.5 de su espacio flex, con una posición relativa y que tenga una animación de 900ms, que afecte cuando se encongen y que empiese lento y termine de forma abrupta */
+.paneles{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50px;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  -webkit-transition: all 900ms ease-in;
+}
+
+/*Le definimos el tamano de letra en 19px, hacemos que tenga una posicion absolua para sacar el titulo de las reglas y definir su posicion abajo a 15px del borde y con 15px de separación de la isquierda, le decimos que tenga una opacidad de 0 para que no se vea margen de 0 para que no ocupe el espacio del margen*/
+.paneles h3{
+  font-size: 19px;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  opacity: 0;
+  margin: 0;
+}
+
+/*Le ponemos estilos al enlace, le ponemos el mismo tamano de letra, le ponemos de color balnco y le decimos que no tenga estilos propios del enlace*/
+h3 a{
+  font-size: inherit;
+  color: white;
+  font-style: none;
+}
+
+/*El contenedor que tenga la clase active, se estira en un 5 el flex, por lo que se le permitira ver mejor el contenido, siendo que flex le indica que se redusca o crecar en base al tamano de su contenedor felxible*/
+.paneles.active{
+  flex: 5;
+}
+
+/*el titulo del contenedor que se tiene la clase active en ese momento, primero que se muestre y segundo sobre esa propiedad de que muestre le pondremos una animación de esa forma no aparece de golpe*/
+.paneles.active h3{
+  opacity: 1;
+  transition: opacity 0.4s ease-in 0.5s;
+}
+
+/*aplicamos ciertas normas css dependiendo de si el ancho del dispositivo es igual o menos a 480px*/
+@media(max-width:480px){
+
+    /*El dispositivo al ser pequeno le ponemos un ancho completo a la sección de los elementos*/
+    .section{
+      width: 100vw;
+    }
+
+    /*Ajustamos para que se ejecute la propiedad en los ultimos paneles, haciendo que el 4 y el 5 no se muuestren*/
+    .paneles:nth-of-type(4),
+    .paneles:nth-of-type(5){
+      display: none;
+    }
+
+}
