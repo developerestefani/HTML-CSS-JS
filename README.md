@@ -2,5 +2,6 @@
 
 Esta son las funciones que puedo crear para tu sistema o sitio web, son de estudio y de practica
 
-|nombre|Demsotración|
+| nombre | Demsotración |
 |Tarjetas expansivas| [demo](https://codepen.io/tv/KpEVaG)|
+|Barra progreseiva| [demo](https://codepen.io/developerestefani/pen/mdQezML)|

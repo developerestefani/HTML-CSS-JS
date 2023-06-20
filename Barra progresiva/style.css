@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+/* hacemos un llamado al html general con el fin de establcer ciertos parametos globales es como llamar a la etiqueta html pero con mayor grado de especificidad, seteamos el color de la barra y vacia como en uso */
+:root{
+    --line-border-fill:#3498db;
+    --line-border-empty:#383838;
+}
+
+/* Definimos que todos los elementos de la caja se tomen como el mismo valor de ancho y alto */
+*{
+    box-sizing: border-box;
+}
+
+/* Definimso el color del fondo, la familia de fuente, definimos a los objets como flexibles para que esten uno al lado del otro, y los alineamos en el centro los objetos como el contenido, le damos una altura del 100% del dispositivo, lo ocultamos pero haciendo que igual dejen el espacio y dejando todos los margenes en 0 */
+body{
+    background-color: #1f1f1f;
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* alienamos los textos en el centro */
+.section{
+    text-align: center;
+}
+
+/* Le decimos que son elemento flexibles paraque se coloquen uno al lado del otro y le decimos que ocupen el espacio relativo al que tiene, de forma que por cada elemento quede un espacio igual y se ditrubullan de mejor manera, lo hacemos relativo con el fin de dejarles en el flujo del documento el especifico dentro del contenedor a los elementos, se le da un margen inferior de 30px para separarlo de los botones, se le dice que el ancho maximo que se puede ocupar es de 1005 y el ancho normal sera de 350px*/
+.section-barr{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 350px;
+}
+
+/* Le estamos dando estilo al elemnto inmediatamente siguiente al seleccionado para crear la barra progresiva cuando esta en exito, que este vacio y le damos la variable color que definimso en :root, le asignamos una posicion absoluta para eliminarlo del flujo de css del documento y crearle uno nuevo,  dandole un espacio del 50% superior pegados a la izquierda con el fin de darle apariencia de linea, y le damos una posición vertical entre elementos, con una altura de 4px para que no sea tan ancha y ancho que abarque todo y un z-index de -1 para estar superpuesto a los otros elementos*/
+.section-barr::before{
+    content:'';
+    background-color: var(--line-border-empty);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+}
+
+
+/* Le estamos dando estilo a la barra cuando no esta activa, primero le asignamos el color mediante la varaible que declaramos en root, le asignamos una posicion absoluta para eliminarlo del flujo de css del documento y crearle uno nuevo,  dandole un espacio del 50% superior pegados a la izquierda con el fin de darle apariencia de linea y le damos una posición vertical entre elementos, con una altura de 4px para que no sea tan ancha y ancho de 0% y un z-index de -1 para estar superpuesto a los otros elementos, le damos una transición simple y uniforme de 4ms*/
+.bar-progress{
+    background-color: var(--line-border-fill);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+    transition: 0.4s ease;
+}
+
+/* le asignamos un fondo, un color de letra un un borde del 50% para que se vea como un circulo, un alto un un ancho de 30px para que sea pequeno, un display flex para que esten los elemento uno al lado del otro y colocamos tanto el contenido como los elemento en el centro, le colocamos un borde solido de 3px con el color definido en la vaiable como empty y al final le damos una transición sencilla y uniforma de 4ms */
+.position{
+    background-color: #1f1f1f;
+    color: #e2e2e2;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--line-border-empty) ;
+    transition: 0.4s ease;
+}
+
+/* Cuando el circulo este activo le cambiamos el color al borde por la variable fill */
+.position.active{
+    border-color: var(--line-border-fill);
+}
+
+/* A los botones, le damos un color de fondo con la variable fill y un color de letra (blanco), hacemos que el borde no tenga grosor ademas de asignarle un raido de 6px, hacemos que cuando pase el cursor aparesca una manito y tambien que a fuente sea la del padre, que tengan un margen interno de 8px arriba y abajo y de 30px a los lados, un margen general de 5px, ademas de un tamano de letra de 14px */
+.btn{
+    background-color: var(--line-border-fill);
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 8px 30px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+/* cuando el boton tenga este activado, se transforma con escalamos en los dos ejes al 0.98 para hacerlo más pequeno*/
+.btn:active {
+    transform: scale(0.50);
+  }
+
+/* Cuando el boton esta enfocado se le quita las propiedades de linea */
+.btn:focus{
+    outline: 0;
+}
+
+/* Cuando el boton se encuentre desabilitado, se le coloca el color de fondo con la variable empaty y el cursor tiene que aparecer desabilitado */
+.btn:disabled{
+    background-color: var(--line-border-empty);
+    cursor: not-allowed;
+    background-color: black;
+}
