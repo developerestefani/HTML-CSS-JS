@@ -13,3 +13,25 @@ body{
     overflow-x: hidden;
     margin: 0;
 }
+
+/* Para el contenedor general se coloca de fondo #fafafa, la transformacion tendra origen arriba a la izquierda, con una transicion en la transformacion  de 0.5s uniforme en su velocidad, con un ancho y un alto del 100 y un padding de 50px */
+.containerG{
+    background-color: #fafafa;
+    transform: top left;
+    transition: transform 0.5s linear;
+    width: 100vw;
+    height: 100vh;
+    padding: 50px;
+}
+
+/* Al contenedor principal en conjuento con la funcion para mostrar el menu, tendra una tranformacion rotativa inversa de 20 grados */
+.containerG.show-nav{
+    transform: rotate(-20deg);
+}
+
+/* Para el contenedor que tendra el circulo del menu, haremos lo siguiente, lo posicionamos de una forma en que no se pueda mover y se quede fijo arriba a la iquierda pero que se desplace al hacer scroll, y le colocamos el arriba  y a la izquierda 100px negativos para que este se oculte */
+.containerC{
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
