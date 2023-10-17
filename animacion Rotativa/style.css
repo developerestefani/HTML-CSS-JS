@@ -17,15 +17,15 @@ body{
 /* Para el contenedor general se coloca de fondo #fafafa, la transformacion tendra origen arriba a la izquierda, con una transicion en la transformacion  de 0.5s uniforme en su velocidad, con un ancho y un alto del 100 y un padding de 50px */
 .containerG{
     background-color: #fafafa;
-    transform: top left;
+    transform-origin: top left;
     transition: transform 0.5s linear;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     padding: 50px;
 }
 
 /* Al contenedor principal en conjuento con la funcion para mostrar el menu, tendra una tranformacion rotativa inversa de 20 grados */
-.containerG.show-nav{
+.containerG .show-nav{
     transform: rotate(-20deg);
 }
 
@@ -34,4 +34,49 @@ body{
     position: fixed;
     top: -100px;
     left: -100px;
+}
+
+/* Para la apariendia del circulo te que realizar los siguientes estilos, se le colocara de fondo el color ff7979, de ancho y alto se le colocara 200px, con un borde circular, su posicion tiene que basarse ariiba y abajo en su posicion inical, y traciosionara una transformacion en 0.5s culla velocidad sera uniforme */
+.circle{
+    background-color:#ff7979 ;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+}
+
+/* cuando el contenedor este mostrando el menu, el circulo del mismo tendra una rotacion negativa de 70 grados */
+.containerG .show-nav{
+    transform: rotate(-70deg);
+}
+
+/* Los botones del circulo para abrir y cerrar menu tendra estas caracteristicas, el curso se volvera manita que apunta, tendra una posicion en base a la posicion inicial del body, y ocupara un 50% arriba y a la izquierda, con un alto de 100px y un fondo transparente sin borde y un tamano de fuente de 26px, de color blanco */
+.circle button{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background:transparent;
+    border: 0;
+    font-size: 26px;
+    color: #fff;
+}
+
+/* cuando el circulo que contiene el boton este enfocado, le colocaremos sin contorno  */
+.circle button:focus{
+    outline: none;
+}
+
+/* el boton del menu para abrir tiene que hacer los siguiente tiene que estar a la izquierda un 60% */
+.circle button#open{
+  left: 60%;
+}
+
+/* el boton de cierre tiene que tener las siguientes caracteristicas, tiene que tener una separacion de la parte superior de 60%, una rotacion de 90 grados y el origen de su transformacion tiene que ser arriba y a la izquierda */
+.circle button#close{
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
 }
