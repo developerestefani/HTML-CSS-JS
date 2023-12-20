@@ -80,3 +80,91 @@ body{
   transform: rotate(90deg);
   transform-origin: top left;
 }
+
+/* Para la seccion del menu vamos a hacer lo siguiente una transformación que se translade en el eje X de 0, y con un retraso de 0.3sg */
+.containerG.show-nav + nav li{
+    transform: translateX(0);
+    transition-delay: 0.3s;
+}
+
+/* Para el menu de navegacion lo posicionamos de forma que se quede aderido, teniendo una deparacion inferior de 60, izquierda de 0 y una superposicion maxima de 100 */
+nav{
+    position: fixed;
+    bottom: 60px;
+    left: 0;
+    z-index: 100;
+}
+
+/* Para la lista desordenada dentro del menu de navegacion vamos a quitar el estilo de lista del elemento y colocar un margen interno de 30px */
+nav ul{
+    list-style-type: none;
+    padding-left: 30px;
+}
+
+/* Para los elemnetos dentro de la lista del manu de navagacion vamos ha convertir todos el texto en mayuscula, de color blanco, con un margen superior e inferior de 40px y un margen a los lados de 0, realizaremos una tranformacion haciendo un translado en el eje X de -100% y se hara mediante una transicion de 0.4s que sean lenta al entrar */
+nav ul li{
+    text-transform: uppercase;
+    color: #fff;
+    margin: 40px 0;
+    transform: translate(-100%);
+    transition: transform 0.4s ease-in;
+}
+
+/* Para los iconos dentro de los elemnetos de la lista desordenada del menu de navegacion, vamos ha poner el tamano a 20px y colocar el margen de la derecha a 10px */
+nav ul li i{
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/* Para los elemntos de la lista del menu, que este inmediatamente uno al lado del primero del otro vamos ha colocar un margen a l aizquierda de 15px y transladar en el eje x -150%  */
+nav ul li + li {
+    margin-left: 15px;
+    transform: translate(-150%);
+}
+
+/* Para el elemento de la lista del menu de navegacion, que esta inmediatamente al lado del segundo elemento de la lista vamos ha hacer colocar el margen a la derecha de 30px y transladar en el eje X -200% */
+nav ul li + li + li{
+    margin-left: 30px;
+    transform: translateX(-200%);
+}
+
+/* Para los enlaces dentro del menu de navegacion vamos ha colocarlos blancos, sin decoraciones, y con una transicion en todas sus propiedades que dure 0.5s */
+nav a{
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+/* Cuando los enlaces del menu de lavegacion sean activados se colocara el color #FF7979 y el grosor de la fuente sera negrita */
+nav a:hover{
+    color:#ff7979;
+    font-weight: bold;
+}
+
+/* Para las imagenes destro del contenido se utilizara un ancho que abarque todo */
+.content img{
+    width: 100%;
+}
+
+/* Para el contenido, este trandra un maximo de 1000px de ancho con una margen superior e inferior de 50px y uno predifinido para los lados */
+.content{
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+/* Para el encqabezado primero dentro del contenido vamos ha colocar un margen de 0 */
+.content h1{
+    margin: 0;
+}
+
+/* Para los textos descritivos dentro del contenido vamos ha colocar de color #555 y tiene que estar en italica */
+.content small{
+    color: #555;
+    font-style: italic;
+}
+
+/* Para el texto dentro del contenido vamos ha colocarlo de color #333 y a colocar la separacion de las lineas en 1.5 */
+.content p{
+    color:#333;
+    line-height: 1.5;
+}
