@@ -5,3 +5,4 @@ Esta son las funciones que puedo crear para tu sistema o sitio web, son de estud
 | nombre | Demsotración |
 |Tarjetas expansivas| [demo](https://codepen.io/tv/KpEVaG)|
 |Barra progreseiva| [demo](https://codepen.io/developerestefani/pen/mdQezML)|
+|Animación rotativa| [demo](https://codepen.io/developerestefani/LYaPgBY)|
