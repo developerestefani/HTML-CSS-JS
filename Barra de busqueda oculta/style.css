@@ -1,0 +1,7 @@
+/* se importa la fuente de googel */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Deforma general se hace que todos los margenes cuentes como uno solo */
+*{
+    box-sizing: border-box;
+}
