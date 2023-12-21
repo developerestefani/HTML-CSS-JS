@@ -1,0 +1,37 @@
+/* Se importa la fuentes */
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+/* Para el sitio web general se tiene que hacer que los margenes y bordes sean uno solo*/
+*{
+    box-sizing: border-box;
+}
+
+/* En el cuerpo del sitio web primero declararemos el tipo de fuente que sera la fuente ubunto sin serif, siguiendo el modelo flex para el acomodo de cajas, se tiene qua linear todos lo elementos en el centro, con un alto total, ocultando el exedente del contenedor y sin margenes*/
+body{
+    font-family: 'Ubuntu', sans-serif;
+    position: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* El fondo va a tener una imagen de fondo que no se repita, alineada en el centro del contenedo y en el centro de la imagen, la posicion estara basada en su padre inmediato, arriba y a la izquierda tendra espacios negativos, el ancho sera complea + 60 px al igual que el alto, su relevancia sera de -1 en superposicion, y tendra una opacidad de 0px */
+.bg{
+    background: url('https://images.unsplash.com/photo-1576161787924-01bb08dad4a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2104&q=80') no-repeat center center/cover;
+    position: absolute;
+    top:-30px ;
+    left: -30px;
+    width: calc(100vw + 60px);
+    height: calc(100vh + 60px);
+    z-index: -1;
+    filter: blur(0px);
+}
+
+
+/* El espacio que contendra el contador tiene que tener un tamano del letra de  50px y de color blanco */
+.loading-text{
+    font-size: 50px;
+    color: #fff;
+}
