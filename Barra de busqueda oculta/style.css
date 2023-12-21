@@ -5,3 +5,62 @@
 *{
     box-sizing: border-box;
 }
+
+/* Para el sitio definiremos primero una degradado de fonfo a 90 grados de inclinacion, luego escogeremos la familia de la fuente sera Roboto sin serif, que este tenga el modelo flex para que sea mas comodo organizar el contenido, que todo se encuentre ubicado en el centro tanto elementos como textocon un alto del 100 de altura, donde el exedente tiene que permanecer oculto, y no debe poseer margenes */
+body{
+    background-image: linear-gradient(90deg, #fc6601, #883018);
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* el contenedor del buscador de busqueda se le va ha colocar una posicion en todos los sentidos va a estar basada en su posicion original y una altura de 50 px */
+.search{
+    position: relative;
+    height: 50px;
+}
+
+/* Para el input que esta dentro del espacio de busqueda vamos ha ponerle color blanco de fondo, sin border, el tamano de la letra a 18, con margenes internos de 15, alto y ancho de 50px y una animacion de su ancho que dure 0.3s y empiese normal, aumente a la mitad y disminuya su velocidad hacia el final  */
+.search .input{
+    background-color: #fff;
+    border: 0;
+    font-size: 18px;
+    padding: 15px;
+    height: 50px;
+    width: 50px;
+    transition: width 0.3s ease;
+}
+
+/* A la clase del boton vamos ha, ponerle de fondo blanco, sin bordes, que el cursor se vuelva manito, el icono de tamano 24px, se tiene que desplazar despendiento del tamano del padre inmediato, teniendo arriba y a la izquierda sin espacio, con alto y ancho de 50px, y una animacion que transforme con una duracion de 0.3s que inicie a velocidad normal, a la mitad acelere y disminuya al final */
+.btn{
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    transition: transform 0.3s ease;
+}
+
+
+/* Cuando la clase del boton o el input esten enfocados por el raton,  no tendra contorno*/
+.btn:focus, .input:focus{
+    outline: none;
+}
+
+/* Cuando el cajon de busqueda tenga la clase active el cajon de busqueda debera aumentar su ancho 200px */
+.search.active .input{
+    width: 200px;
+}
+
+/* Cuando el cajon de busqueda tenga la clase active el boton de busqueda debera transladar 198px en el eje x */
+.search.active .btn{
+    transform:translateX(198px) ;
+}
