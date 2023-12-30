@@ -9,7 +9,7 @@
 /* En el cuerpo del sitio web primero declararemos el tipo de fuente que sera la fuente ubunto sin serif, siguiendo el modelo flex para el acomodo de cajas, se tiene qua linear todos lo elementos en el centro, con un alto total, ocultando el exedente del contenedor y sin margenes*/
 body{
     font-family: 'Ubuntu', sans-serif;
-    position: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
