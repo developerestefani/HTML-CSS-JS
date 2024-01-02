@@ -1,0 +1,56 @@
+/* importar la fuentes desde googel */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* como regal general tenemos que fucionar todo lo que son bordes, y margenes en uno solo para evitar problemas al calcular el archo */
+*{
+    box-sizing: border-box;
+}
+
+/* Para el cuerpo del sitio web, primero definimos el fondo como blanco, y hacemos uso de fuente la familia roboto, sin serif, la disposicion va a ser flexible, ese contenedor dirigiremos su direccion uno detras del otro, todo se alinea al centro, sin margenes recortando el exedente del contenido en el eje x */
+body{
+    background-color: #efedd6;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* EL titulo principal tendra de espacio superficial en todos los lados 10px */
+h1{
+    margin: 10px;
+}
+
+/* En las cajas vamos ha, definir de fondo el color steelblue y las letras en blanco, su disposicion sera mediante el modelo que permite que se ajuste el contenido de los hijos en conjunto, todo se tiene que colocar centrado, con un ancho de 400px, una alto de 200px y un espacio exterior de 10px, el borde debe tener una circunsferencia de  10px, y los elementos tendran una sombra de arriba 2px izquierda 4px y derecha 5px con un color por saturacion y con transparencia de 0,0,0,0.3, tendra una animacion de movimiento en el eje x de 400% y por ultimo esa animacion durara 0.4s comensando normal, acelerando en el medio y desacelerando al final*/
+.box{
+    background-color: steelblue;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+    transform: translateX(400%);
+    transition: transform 0.4s ease;
+}
+
+/* Para lo elemento impares de la lista de cajas, se va ha aplicar una animacion en el eje x, moviendose un -400%  */
+.box:nth-of-type(even) {
+    transform: translateX(-400%);
+  }
+
+/* Cuando las cajas tengan la clase .show vamos ha, realizar una animacion en el eje X dejando el elemento el el puesto 0 */
+.box.show {
+    transform: translateX(0);
+  }
+  
+
+/* los titulos secundarios dentro de las cajas van a tener un tamano de 45px */
+h2{
+    font-size: 45px;
+}
