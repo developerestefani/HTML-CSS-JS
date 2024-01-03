@@ -3,7 +3,7 @@
 Esta son las funciones que puedo crear para tu sistema o sitio web, son de estudio y de practica
 
 | nombre | Demsotración |
-|Trajetas expansivas| [demo](https://codepen.io/developerestefani/full/LYaPgBY)|
+| Trajetas expansivas | [demo](https://codepen.io/developerestefani/full/LYaPgBY) |
 |Barra peogresiva| [demo](https://codepen.io/developerestefani/full/mdQezML)|
 |menu rotativo| [demo](https://codepen.io/developerestefani/full/LYaPgBY)|
 |barra de busqueda oculta| [demo](https://codepen.io/developerestefani/full/WNmNbjN)|
