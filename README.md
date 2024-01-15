@@ -10,3 +10,4 @@ Esta son las funciones que puedo crear para tu sistema o sitio web, son de estud
 |barra de busqueda oculta| [demo](https://codepen.io/developerestefani/full/WNmNbjN)|
 |animacion de carga| [demo](https://codepen.io/developerestefani/full/ZEPbYOZ)|
 |animacion de scroll| [demo](https://codepen.io/developerestefani/full/YzgygNb)|
+|animacion split lateral| [demo](https://codepen.io/developerestefani/full/yLwgjYy)|
