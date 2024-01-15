@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* se definen los colores de los botones, de los fondos, los diferentes ancho y la velocidad de las animaciones */
+:root{
+    --left-bg-color:rgba(87, 84, 236, 0.7);
+    --right-bg-color:rgba(43, 43, 43, 0.8);
+    --left-btn-hover-color:rgba(87, 84, 236, 1);
+    --right-btn-hover-color:rgba(28, 122, 28, 1);
+    --hover-width:75%;
+    --other-width:25%;
+    --speed:1000ms;
+}
+
+/* De forma general se tiene que fusionar los espacios internos y externos, junto con el borde para hacer un solo ancho */
+*{
+    box-sizing: border-box;
+}
+
+/* Para la ventana principal primero definimos la familia que llamamos sin serif, con un alto completo especifico al 100 de la ventana grafica, recortano los exedentes de la ventana grafica, sin margenes */
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* Para lo titulos principales vamos ha poner de tamanoo 4rem de color blanco, su posicion se basara en el plano 0,0 del padre inmediato con un espacio 50% a la izquierda y la parte superior de 20%, tendra una animacion que se movera en el eje X del -50%, manejando los espacios en blanco donde todos colapsen en uno solo sin saltos de linea predefinidos*/
+h1{
+    font-family: 4rem;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%) ;
+    white-space: nowrap;
+}
+
+/* Para los botones de compra vamos ha realizar lo sisguiente, su posicion sera relativa al plano 0,0 de su padre inmediato, su disposicion sera flexible en conjunto con los demas elementos dentro de su padre inmediato, todo estara centrado, con un espacio izquierdo de 50% y un espacio superior de 40%, tendra una animacion donde se transladara en el eje X un -50%, el texto no tendra decoracion y sera de color blanco, tendra un borde blanco, lineal con un grosor de 0.2rem, con un tamano de 1rem, el grosor de la letra tiene que ser bold, y todos en mayuscula, con un ancho de 15rem, y un espacio interno de 1.5rem */
+.btn{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: #fff;
+    border: #fff solid 0.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 15rem;
+    padding: 1.5rem;
+
+}
+
+/* Cuano las clases .split .left y la del boton esten en hover vamos a definir el color de fondo por el color pre establcido de left btnl color hover y el borde como left btn hover color */
+.split.left .btn:hover{
+    background-color: var(--left-btn-hover-color);
+    border-color: var(--left-btn-hover-color);
+}
+
+/* Cuando las clases .split.right .btn esten en hover vamos a definir el color de fondo  por el preestablcido right btn color hover y el borde por right btn hover color */
+.split.right .bt:hover{
+    background-color: var(--right-btn-hover-color);
+    border-color: var(--right-btn-hover-color);
+}
+
+/* Para el contenedor general vamos ha, su posicion va ha cer relativa al eje 0.0 de su posicion original, con un ancho y un alto del 100% y un fondo color #333 */
+.container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #333;
+}
+
+/* En la clase split vamos ha, su posicion va a estar definida por el eje 0.0 de su padre inmediato, con un ancho del 50% y un alto del 100%, cuyo sobrante debe ser recortado */
+.split{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Para las clases split y left vamos ha, como ya en split se definio su posicion vamos a definir que no habra espacio en el lado izquierdo, colocaremos de fondo la imagen correspondiente, que esta no se repita, y se tiene que ajustar la imagen al tamano del contenedor */
+.split.left{
+    left: 0;
+    background-image: url(img/img1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* En las clases split y left vamos a insertar un espacio antes de el contenido de esas clases, colocando su posicion en el eje 0.0 de su padre inmediato, vamos a darle un alto y anhco del 100%, y el color de fondo va ha ser la variable left bg color */
+.split.left::before{
+    content: ' ';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--left-bg-color);
+}
+
+/* Para las clases split y right vamos ha, como ya en split se definio su posicion vamos a definir que no habra espacio en el lado derecho, colocaremos de fondo la imagen correspondiente, que esta no se repita, y se tiene que ajustar la imagen al tamano del contenedor */
+.split.right{
+    right: 0;
+    background-image: url(img/img2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* En las clases split y right  vamos a insertar un espacio antes de el contenido de esas clases, colocando su posicion en el eje 0.0 de su padre inmediato, vamos a darle un alto y anhco del 100%, y el color de fondo va ha ser la variable right bg color */
+.split.right::before{
+    content: ' ';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--right-bg-color);
+}
+
+/* Para split tanto derecho como izquierdo y ambos estando en el estado ::before vamos a definir una transicion de todos sus elementos
+que tendra de velocidad la variable speed y que sera rapdio al iniciar y va ir disminuyendo su velocidad */
+.split.left, 
+.split.right,
+.split.left::before, 
+.split.right::before{
+    transition: all var(--speed) ease-in-out;
+}
+
+/* A la porpiedad hover-left y a la clase left le vamos a definir un anocho con la variable hover-width  */
+.hover-left .left{
+    width: var(--hover-width);
+}
+
+/* A la clase hover-left con la clase right le vamos a definir un ancho con la variable other-width */
+.hover-left .right{
+    width: var(--other-width);
+}
+
+/* A la porpiedad hover-right y a la clase right le vamos a definir un anocho con la variable hover-width  */
+.hover-right .right {
+    width: var(--hover-width);
+}
+
+/* A la clase hover-right con la clase left le vamos a definir un ancho con la variable other-width */
+.hover-right .left{
+    width: var(--other-width);
+}
+
+/* Definiremos un ancho medio del dispositivo para definir ciertas reglas donde su ancho maximo sera 800px, entonces apartir de esa medida vamos a definir: */
+@media (max-width:800px){
+
+    /* Los titulos principales van a tener una tama;o de 2rem y un espacio superior de 30% */
+    h1{
+        font-size: 2rem;
+        top: 30%;
+    }
+
+    /* Para el boton vamos a definir que el espacio interno sea de 1.2rem y que el ancho sea de 12 rem  */
+    .btn{
+        padding: 1.2rem;
+        width: 12rem;
+    }
+
+}
+
+    
+
+    
