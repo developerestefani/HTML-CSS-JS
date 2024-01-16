@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+/* Se define como norma general que todos los margenes se cuente como uno solo para el ancho */
+
+/* En el cuerpo definimos que, un color de fondo, un color de letra, la fuente que llamamos sin serif, la disposicion tiene que ajustarse al contenido, esto manteniendo la forma de columna, y todo tiene que estar centrado, con una altura completa al frame que lo contiene, eliminando cualquier exedente, y sin margenes */
+
+/* el contenedor principal tiene que tener, un color de fondo con transparencia, una espacio internos de 20 arriba y abajo con 40 a los lados, y las esquinas redondeas 5px, */
+
+/* El titulo principla tiene que estar centrado y tener un espacio exterior en la parte inferior de 30px */
+
+/* EL enlace tiene que, no debe poseer decoracion y tener un color */
+
+/* El boton debe, que el curso se vuelva manita cuando le pase por encima, su disposicion debe ser mixta entre lineal y en columna, tener un ancho del 100%, con un fondo de color, un espacio interior de 15px, la familia tiene que ser la definida en el cuerpo, con un tamano de letra de 16px, sin bordes, y con una circunferencia de 5px */
+
+/* el boton no debe tener sobre linea al estar enfocado */
+
+/* EL boton al ser activado tiene que, tener una animacion donde se haga pequeno en 0.98 */
+
+/* El texto tiene que tener un espacio exterior en la parte superior de 30px */
+
+/* la clase de los div dentro del formulario tiene que tener, basar su posicion en la pisicion que tiene en ese momento, con un espacion exterior en la parte superior de 20px, 0 a los lados y en la parte inferior de 40px, y un ancho de 300px */
+
+/* los imputs dentro de los div tiene que tener, ser transparentes, sin bordes, definiendo un borde en la parte inferior con un ancho de 2px, de un color y que sea una liea continua, su disposicion tiene que ser en columna, tener un ancho del 100%, una espacio interior de 15px arriba y abajo y ninguno a los lados, el tamano de la letra tiene que se 18px, y la letra tiene que ser de color blanco */
+
+/* Cuando el input este enfocado va a tener, no debe tener una sobrelinea, y tiene que tener un color inferior */
+
+/* Cuando el input dentro del contenedor se le escriba debe de tener, no tener sobrelinea y tener un color */
+
+/* Los label dentro de los div deben de tener, su poasicion debe basarse en su padre inmediato, un espacio de 15px en la parte superior, sin espacio a la izquierda, se le tiene que quitar lo propiedad de poder ser un evento con el cursor */
