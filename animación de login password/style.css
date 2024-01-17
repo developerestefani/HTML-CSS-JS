@@ -1,29 +1,123 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 /* Se define como norma general que todos los margenes se cuente como uno solo para el ancho */
+*{
+    box-sizing: border-box;
+}
 
 /* En el cuerpo definimos que, un color de fondo, un color de letra, la fuente que llamamos sin serif, la disposicion tiene que ajustarse al contenido, esto manteniendo la forma de columna, y todo tiene que estar centrado, con una altura completa al frame que lo contiene, eliminando cualquier exedente, y sin margenes */
+body{
+    background-color: orange;
+    color: #fff;
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
 
 /* el contenedor principal tiene que tener, un color de fondo con transparencia, una espacio internos de 20 arriba y abajo con 40 a los lados, y las esquinas redondeas 5px, */
+.container{
+    background-color: rgba(104, 18, 0, 0.4);
+    padding: 20px 40px;
+    border-radius: 5px;
+}
 
 /* El titulo principla tiene que estar centrado y tener un espacio exterior en la parte inferior de 30px */
+h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
 
-/* EL enlace tiene que, no debe poseer decoracion y tener un color */
+/* EL enlace tiene el contenedor principal, no debe poseer decoracion y tener un color */
+.container a{
+    text-decoration: none;
+    color: lightcoral;
+}
 
 /* El boton debe, que el curso se vuelva manita cuando le pase por encima, su disposicion debe ser mixta entre lineal y en columna, tener un ancho del 100%, con un fondo de color, un espacio interior de 15px, la familia tiene que ser la definida en el cuerpo, con un tamano de letra de 16px, sin bordes, y con una circunferencia de 5px */
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    background-color: lightcoral;
+    padding: 15px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 0;
+    border-radius: 5px;
+}
 
 /* el boton no debe tener sobre linea al estar enfocado */
+.btn:focus{
+    outline: 0;
+}
 
 /* EL boton al ser activado tiene que, tener una animacion donde se haga pequeno en 0.98 */
+.btn:active{
+    transform: scale(0.98);
+}
 
 /* El texto tiene que tener un espacio exterior en la parte superior de 30px */
+.text{
+    margin-top: 30px;
+}
 
-/* la clase de los div dentro del formulario tiene que tener, basar su posicion en la pisicion que tiene en ese momento, con un espacion exterior en la parte superior de 20px, 0 a los lados y en la parte inferior de 40px, y un ancho de 300px */
+/* la clase de los div dentro del formulario tiene que tener, basar su posicion en la posicion que tiene en ese momento, con un espacion exterior donde la parte superior de 20px, 0 a los lados y en la parte inferior de 40px, y un ancho de 300px */
+.form-control{
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+}
 
 /* los imputs dentro de los div tiene que tener, ser transparentes, sin bordes, definiendo un borde en la parte inferior con un ancho de 2px, de un color y que sea una liea continua, su disposicion tiene que ser en columna, tener un ancho del 100%, una espacio interior de 15px arriba y abajo y ninguno a los lados, el tamano de la letra tiene que se 18px, y la letra tiene que ser de color blanco */
+.form-control input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px lightcoral solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fff;
+}
 
 /* Cuando el input este enfocado va a tener, no debe tener una sobrelinea, y tiene que tener un color inferior */
+.form-control input:focus{
+    outline: 0;
+    border-bottom-color:lightgrey;
+}
 
 /* Cuando el input dentro del contenedor se le escriba debe de tener, no tener sobrelinea y tener un color */
+.form-control input:valid{
+    outline: 0;
+    border-bottom-color: lightsalmon;
+}
 
 /* Los label dentro de los div deben de tener, su poasicion debe basarse en su padre inmediato, un espacio de 15px en la parte superior, sin espacio a la izquierda, se le tiene que quitar lo propiedad de poder ser un evento con el cursor */
+.form-control label{
+    font-family: 'Muli', sans-serif;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+/* el span dentro de los label dentro de los div del formulairo tiene que, tener una disposicion tanto en linea como en columna, su letra tiene que ser de 18px de grande, tener un ancho minimo de 5px y debera tener una transicion de 0.3s,  teniendo un tipo de animacion cubic-bezier que define su transision en el eje y donde se definen sus velocidades en cuatro partes de la animacion inicio seria 0.68, medio -0.55 y 0.265 y final 1.55*/
+.form-control label span{
+    font-family: 'Muli', sans-serif;
+    display: inline-block;
+    font-family: 18px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Los span y label, inmediatamente seguidos a los inputs que pueden esta enfocados o en uso, dentro de los div del formulariom ellos tiene que tener, un color de letra diferente y una animacion en el eje Y de -30px  */
+.form-control input:focus + label span, 
+.form-control input:valid + label span{
+    color: lightsalmon;
+    transform: translateY(-30px);
+}
