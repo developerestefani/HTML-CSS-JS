@@ -11,3 +11,4 @@ Esta son las funciones que puedo crear para tu sistema o sitio web, son de estud
 |animacion de carga| [demo](https://codepen.io/developerestefani/full/ZEPbYOZ)|
 |animacion de scroll| [demo](https://codepen.io/developerestefani/full/YzgygNb)|
 |animacion split lateral| [demo](https://codepen.io/developerestefani/full/yLwgjYy)|
+|animacion del login| [demo](https://codepen.io/developerestefani/full/ZEPKLZZ)|
