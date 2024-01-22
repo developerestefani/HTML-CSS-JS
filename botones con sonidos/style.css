@@ -27,13 +27,13 @@ body{
  color: #28DAEB;
  margin: 1rem;
  padding: 1.5rem 3rem;
- font-size:1.3rem ;
+ font-size:1.2rem ;
  font-family: inherit;
  cursor: pointer;
 }
 
 /* El boton al estar activado vamos ha, hacer que se vulva mas claro al 0.9 de 1 */
-.btn:active{
+.btn:hover{
     opacity: 0.9;
 }
 
