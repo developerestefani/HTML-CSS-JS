@@ -1,11 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
 
 /* De forma general colocaremos todos los margenes como un solo ancho */
+*{
+    box-sizing: border-box;
+}
 
 /* En el cuerpo vamos ha, colocarle un color de fondo, con la familia que llamamos en la url definirla sin serif, su disposición tiene que ser dependiten de en contenido, colocamos los contenedores en varias lineas en base a su disposición, todo tiene que estar centrado incluso el texto, con un alto que sea el total del frame visible, se tienen que eliminar lo exedentes, y no debe poseer espacios externos */
+body{
+    background-color:#EF751F ;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
 
 /* En los botones vamos ha, colocarles un color, ponerles una circusferencia de 5px, quitarle los bordes, la letra tiene que tener un color, el espacio externo va a ser de 1rem,  el espacio interno va a ser de 1.5rem arriba y abajo con 3rem a los lados, el tamaño de la letra sera de 1.3rem, la familia sera la del cuerpo, y el cursos se tiene que volver manita al pasar*/
+.btn{
+ background-color: #48686B;
+ border-radius: 5px;
+ border: none;
+ color: #28DAEB;
+ margin: 1rem;
+ padding: 1.5rem 3rem;
+ font-size:1.3rem ;
+ font-family: inherit;
+ cursor: pointer;
+}
 
 /* El boton al estar activado vamos ha, hacer que se vulva mas claro al 0.9 de 1 */
+.btn:active{
+    opacity: 0.9;
+}
 
-/* El boton al estan enfocado vamos ha, hacer que no tenga sobrelinea */
+/* El boton al estan enfocado vamos ha, hacer que no tenga sobrelineag  */
+.btn:focus{
+    outline: none;
+}
