@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+/* Para el cuerpo de la página, vamos ha, se tiene que elegir escoger el color de fondo, se colocara la familia que se escogio la url sin seref, la disposicion de las cajas tienen que ser dependiendo las mismas, se tiene que matener la posicion de los contenedores en columna, todo tiene que estar alineado, la altura tiene que estar encuadrado en el total del frame, se tiene que eliminar los exedentes, los espacios internos tiene que ser de 20px*/
+body{
+    background-color:#F08409 ;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* El contenedor, vamos ha, Tienes que tener un color de fondo, una circunsferencia de 10px, una sombra  en la perte superior e inferior de 0 en la parte superior a los lados de 10px y inferior de 20px con un blur de negro con 0.1 de transparencia y en los laterales superior de 0 a los lados y en la parte inferior de 6px con el mismo blur, un espacio interior de 50px, el texto tiene que estar centrado, un ancho maximo de 100%, un ancho de 800px*/
+.container{
+    background-color: #fff;
+    color: #936734;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    text-align: center;
+    max-width: 100%;
+    width: 800px;
+}
+
+/* En el titulo del tercer nivel, vamos ha, sin espacios exteriores, transparencia de 0.5, espacio entre letras de  2px*/
+h3{
+    margin: 0;
+    opacity: 0.5;
+    letter-spacing: 2px;
+}
+
+/* En los elementos joke, un tamaño de fuente de 30px, un espacio entre letras 1px, un espacio entre lineas de 40px, un espacio exterior de arriba y abajo de 50px y auto a los lados, un ancho maximo de 600px*/
+.joke{
+    font-size: 30px;
+    letter-spacing: 1px;
+    line-height: 40px;
+    margin: 50px  auto;
+    max-width: 600px;
+}
+
+/* Los botones con la clase btn, vamos ha, se tiene que colocar un color de fondo, y escoger un color de letra, con un borde reducido a que no se vea, con una circunsferencia de 10px, una sombra  en la perte superior e inferior de 0 en la parte superior a los lados de 5px y inferior de 15px con un blur de negro con 0.1 de transparencia y en los laterales superior de 0 a los lados y en la parte inferior de 6px con el mismo blur, un espacio interior de 14px arriba y abajo con un espacio a los lados de 40px, un tamaño de letra de 16px, y el cursor se tiene que volver una manito*/
+.btn{
+    background-color: #2D84A8;
+    color: #fff;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+    padding: 14px 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Cuando los elementos con la clase btn este activado, vamos ha, se tiene que escalar a 0.9*/
+.btn:active{
+    transform: scale(0.9);
+}
+
+/* Cuendo los elementos con la clase btn esta enfocado, vamos ha, tener una sobre linea de 0*/
+.btn:focus{
+    outline: 0;
+}
