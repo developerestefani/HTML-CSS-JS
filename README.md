@@ -13,3 +13,5 @@ Esta son las funciones que puedo crear para tu sistema o sitio web, son de estud
 |animacion split lateral| [demo](https://codepen.io/developerestefani/full/yLwgjYy)|
 |animacion del login| [demo](https://codepen.io/developerestefani/full/ZEPKLZZ)|
 |Botones con sonido| [demo](https://codepen.io/developerestefani/full/MWxvavO)|
+|Chiste malos en ingles| [demo](https://codepen.io/developerestefani/full/vYPeZdM)|
+|Reconoce las teclas| [demo](https://codepen.io/developerestefani/full/MWxEoQo)|
