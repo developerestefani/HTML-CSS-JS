@@ -1,5 +1,5 @@
 /** Definimos las constates que nos permitiran acceder a los diferentes elementos accionables de la aplicación
- * La primera hace referencia a la linea de progreso por su ID
+ * @parem barProgress = La primera hace referencia a la linea de progreso por su ID
  * Los dos siguientes hacen referencia a los botones por su ID
  * La ultima hace referencia a los circulos por su clase .position
  */

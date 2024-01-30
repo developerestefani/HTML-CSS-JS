@@ -35,7 +35,7 @@ body{
   flex: 0.5;
   margin: 10px;
   position: relative;
-  -webkit-transition: all 900ms ease-in;
+  transition: all 900ms ease-in;
 }
 
 /*Le definimos el tamano de letra en 19px, hacemos que tenga una posicion absolua para sacar el titulo de las reglas y definir su posicion abajo a 15px del borde y con 15px de separación de la isquierda, le decimos que tenga una opacidad de 0 para que no se vea margen de 0 para que no ocupe el espacio del margen*/

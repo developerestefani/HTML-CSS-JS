@@ -99,7 +99,7 @@ body{
 
 /* cuando el boton tenga este activado, se transforma con escalamos en los dos ejes al 0.98 para hacerlo más pequeno*/
 .btn:active {
-    transform: scale(0.50);
+    transform: scale(0.9);
   }
 
 /* Cuando el boton esta enfocado se le quita las propiedades de linea */
