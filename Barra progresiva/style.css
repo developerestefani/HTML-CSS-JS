@@ -40,7 +40,7 @@ body{
 
 /* Le estamos dando estilo al elemnto inmediatamente siguiente al seleccionado para crear la barra progresiva cuando esta en exito, que este vacio y le damos la variable color que definimso en :root, le asignamos una posicion absoluta para eliminarlo del flujo de css del documento y crearle uno nuevo,  dandole un espacio del 50% superior pegados a la izquierda con el fin de darle apariencia de linea, y le damos una posición vertical entre elementos, con una altura de 4px para que no sea tan ancha y ancho que abarque todo y un z-index de -1 para estar superpuesto a los otros elementos*/
 .section-barr::before{
-    content:'';
+    content:' ';
     background-color: var(--line-border-empty);
     position: absolute;
     top: 50%;
